@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="831.0" prefWidth="1014.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="distribuidapractica.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="conexion" layoutX="81.0" layoutY="141.0" mnemonicParsing="false" onAction="#conexiongeneral" style="-fx-background-color: gray;" text="Conectar" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="360.0" layoutY="138.0" text="Conexión de manejadores " textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaAlumno" layoutX="84.0" layoutY="287.0" prefHeight="503.0" prefWidth="846.0">
+        <columns>
+            <TableColumn fx:id="idalumno" prefWidth="130.0" text="Campo 1">
+                <cellValueFactory>
+                        <PropertyValueFactory property="idalumno" />
+               </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="nombre" prefWidth="179.0" text="Campo 2">
+               <cellValueFactory>
+                        <PropertyValueFactory property="nombre" />
+               </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="nombreCiudad" prefWidth="143.0" text="Campo 3">
+                <cellValueFactory>
+                        <PropertyValueFactory property="nombreCiudad" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nombreEstado" prefWidth="194.0" text="Campo 4">
+                <cellValueFactory>
+                        <PropertyValueFactory property="nombreEstado" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nombreUsuario" prefWidth="199.0" text="Campo 5">
+                <cellValueFactory>
+                        <PropertyValueFactory property="nombreUsuario" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
